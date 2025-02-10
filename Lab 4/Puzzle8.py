@@ -17,7 +17,6 @@ def findBlank(state):
                 return i, j
             
 def getNeighbors(state):
-    """Generate all possible moves by swapping the blank tile."""
     row, col = findBlank(state)
     moves = []
     directions = [(0, 1), (0, -1), (1, 0), (-1, 0)]  # Right, Left, Down, Up
@@ -31,8 +30,6 @@ def getNeighbors(state):
     return moves
 
 def solve(state, path, visited):
-    """Recursive function to solve the 8-puzzle problem."""
-    # Base case: Check if the goal is reached
     if isGoal(state):
         return path 
     
